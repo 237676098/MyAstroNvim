@@ -13,6 +13,10 @@ require("lazy").setup({
   },
   { import = "community" },
   { import = "plugins" },
+  {
+    'charludo/projectmgr.nvim',
+    lazy = false, -- important!
+  },
 } --[[@as LazySpec]], {
   -- Configure any other `lazy.nvim` configuration options here
   install = { colorscheme = { "astrotheme", "habamax" } },
