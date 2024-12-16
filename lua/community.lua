@@ -8,6 +8,7 @@
 return {
   "AstroNvim/astrocommunity",
   { import = "astrocommunity.pack.lua" },
+  { import = "astrocommunity.git.git-blame-nvim" },
   -- { import = "astrocommunity.motion.lua" },
   -- { import = "astrocommunity.workflow.bad-practices-nvim" },
   -- import/override with your plugins folder
