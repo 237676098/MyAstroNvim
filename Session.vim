@@ -13,11 +13,21 @@ if &shortmess =~ 'A'
 else
   set shortmess=aoO
 endif
-badd +0 .gitignore
+badd +1 lua/polish.lua
+badd +1 lua/community.lua
+badd +1 lua/plugins/none-ls.lua
+badd +1 lua/plugins/astrolsp.lua
+badd +1 lua/plugins/astrocore.lua
+badd +1 lua/plugins/astroui.lua
+badd +21 lua/plugins/heirline.lua
+badd +268 ~/.local/share/nvim/lazy/astroui/lua/astroui/status/component.lua
+badd +1 ~/.local/share/nvim/lazy/astroui/lua/astroui/status.lua
+badd +1 ~/.local/share/nvim/lazy/astroui/lua/astroui/status/utils.lua
 argglobal
 %argdel
-$argadd .gitignore
-edit .gitignore
+tabnew +setlocal\ bufhidden=wipe
+tabrewind
+edit lua/plugins/heirline.lua
 argglobal
 setlocal fdm=manual
 setlocal fde=0
@@ -28,14 +38,54 @@ setlocal fml=1
 setlocal fdn=20
 setlocal fen
 silent! normal! zE
+9,10fold
+23,25fold
+22,28fold
+32,33fold
+31,36fold
+41,43fold
+40,46fold
+7,51fold
+5,52fold
+3,53fold
 let &fdl = &fdl
-let s:l = 1 - ((0 * winheight(0) + 17) / 35)
+let s:l = 25 - ((17 * winheight(0) + 22) / 45)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
-keepjumps 1
-normal! 011|
-tabnext 1
+keepjumps 25
+normal! 024|
+tabnext
+edit lua/plugins/heirline.lua
+argglobal
+balt ~/.local/share/nvim/lazy/astroui/lua/astroui/status/component.lua
+setlocal fdm=manual
+setlocal fde=0
+setlocal fmr={{{,}}}
+setlocal fdi=#
+setlocal fdl=99
+setlocal fml=1
+setlocal fdn=20
+setlocal fen
+silent! normal! zE
+9,10fold
+23,25fold
+22,28fold
+32,33fold
+31,36fold
+41,43fold
+40,46fold
+7,51fold
+5,52fold
+3,53fold
+let &fdl = &fdl
+let s:l = 21 - ((20 * winheight(0) + 22) / 45)
+if s:l < 1 | let s:l = 1 | endif
+keepjumps exe s:l
+normal! zt
+keepjumps 21
+normal! 036|
+tabnext 2
 if exists('s:wipebuf') && len(win_findbuf(s:wipebuf)) == 0 && getbufvar(s:wipebuf, '&buftype') isnot# 'terminal'
   silent exe 'bwipe ' . s:wipebuf
 endif
@@ -47,7 +97,6 @@ if filereadable(s:sx)
   exe "source " . fnameescape(s:sx)
 endif
 let &g:so = s:so_save | let &g:siso = s:siso_save
-nohlsearch
 doautoall SessionLoadPost
 unlet SessionLoad
 " vim: set ft=vim :

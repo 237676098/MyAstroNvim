@@ -9,6 +9,6 @@ return {
   "AstroNvim/astrocommunity",
   { import = "astrocommunity.pack.lua" },
   -- { import = "astrocommunity.motion.lua" },
-  { import = "astrocommunity.workflow.bad-practices-nvim" },
+  -- { import = "astrocommunity.workflow.bad-practices-nvim" },
   -- import/override with your plugins folder
 }
