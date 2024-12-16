@@ -36,7 +36,7 @@ if vim.g.neovide then
 
   vim.g.neovide_floating_corner_radius = 0.5
 
-  -- vim.g.neovide_transparency = 0.8
+  vim.g.neovide_transparency = 1
 end
 
 -- Allow clipboard copy paste in neovim
