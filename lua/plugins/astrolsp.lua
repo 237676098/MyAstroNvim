@@ -45,11 +45,13 @@ return {
     ---@diagnostic disable: missing-fields
     config = {
       -- clangd = { capabilities = { offsetEncoding = "utf-8" } },
-      omnisharp_mono = {
-        name = "omnisharp_mono",
+      omnisharp = {
         filetypes = { 'cs' },
         root_dir = require("lspconfig").util.root_pattern('*.csproj', '*.sln', '.git'),
-        settings = {}
+        settings = {},
+        handlers = {
+
+        },
       }
     },
     -- customize how language servers are attached
@@ -60,14 +62,15 @@ return {
       -- the key is the server that is being setup with `lspconfig`
       -- rust_analyzer = false, -- setting a handler to false will disable the set up of that language server
       -- pyright = function(_, opts) require("lspconfig").pyright.setup(opts) end -- or a custom handler function can be passed
-      omnisharp_mono = function(_,opts)
-        require("lspconfig").omnisharp_mono.setup({
+      omnisharp = function(_,opts)
+        require("lspconfig").omnisharp.setup({
           cmd = { 'omnisharp-mono', '--languageserver', '--hostPID', tostring(vim.fn.getpid()) },
           settings = {
               useModernNet = false,
-              TERM="xterm",
+              -- TERM="xterm",
               monoPath = "/Library/Frameworks/Mono.framework/Versions/Current/Commands/mono",
-          }
+          },
+          -- capabilities = capabilities,
         })
       end
     },
