@@ -24,7 +24,7 @@ return {
           local tab_width = vim.opt.tabstop:get() -- 获取 tabstop 设置中的制表符宽度
           return " SPACE:" .. tab_width .. " " -- 使用"␉"（TAB字符）作为图标来表示空白
         end,
-        hl = "StatusLine",
+        -- hl = "StatusLine",
         condition = conditions.is_not_empty,
       },
       -- Add the encoding indicator
@@ -32,7 +32,7 @@ return {
         provider = function()
           return " " .. vim.bo.fileencoding:upper() .. " " -- 显示编码类型
         end,
-        hl = "StatusLine",
+        -- hl = "StatusLine",
         condition = conditions.is_not_empty,
       },
 
@@ -42,7 +42,7 @@ return {
           local eol = vim.bo.endofline and "LF" or "CRLF" -- 检查换行类型
           return " " .. eol .. " "
         end,
-        hl = "StatusLine",
+        -- hl = "StatusLine",
         condition = conditions.is_not_empty,
       },
       -- status.component.fill(),

@@ -17,7 +17,7 @@ return {
   --命令行模式补全提示
   { import = "astrocommunity.completion.cmp-cmdline" },
   --主题
-  { import = "astrocommunity.colorscheme.vscode-nvim" },
+  { import = "astrocommunity.colorscheme.github-nvim-theme" },
   -- { import = "astrocommunity.colorscheme.rose-pine" },
   -- { import = "astrocommunity.workflow.bad-practices-nvim" },
   -- import/override with your plugins folder
