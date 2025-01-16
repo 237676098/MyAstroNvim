@@ -18,6 +18,7 @@ return {
   { import = "astrocommunity.completion.cmp-cmdline" },
   --主题
   { import = "astrocommunity.colorscheme.github-nvim-theme" },
+  -- { import = "astrocommunity.colorscheme.catppuccin" },
   -- { import = "astrocommunity.colorscheme.rose-pine" },
   -- { import = "astrocommunity.workflow.bad-practices-nvim" },
   -- import/override with your plugins folder
