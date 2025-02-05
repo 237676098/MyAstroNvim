@@ -12,7 +12,8 @@ return {
       ensure_installed = {
         "lua_ls",
         "ts_ls", -- add more arguments for adding more language servers
-        "omnisharp_mono"
+        "omnisharp",
+        "pylsp"
       },
     },
   },
@@ -32,7 +33,7 @@ return {
     -- overrides `require("mason-nvim-dap").setup(...)`
     opts = {
       ensure_installed = {
-        "python",
+        -- "python",
         -- add more arguments for adding more debuggers
       },
     },

@@ -20,6 +20,7 @@ return {
   { import = "astrocommunity.colorscheme.github-nvim-theme" },
   -- { import = "astrocommunity.colorscheme.catppuccin" },
   -- { import = "astrocommunity.colorscheme.rose-pine" },
-  -- { import = "astrocommunity.workflow.bad-practices-nvim" },
+  --定位提示
+  -- { import = "astrocommunity.workflow.precognition-nvim" },
   -- import/override with your plugins folder
 }
